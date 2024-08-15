@@ -85,8 +85,11 @@ herramienta como Xmind, Freemind, o alguna otra aplicación en línea). Ver ejem
 un mapa mental en la figura de abajo.
 
 Ejercicio 2:
-
-Para responder a tus preguntas, utilizaré la información relevante extraída del artículo "Simulacra as Conscious Exotica":
+A partir de la lectura del artículo Simulacra as Conscious Exotica responder:
+1. ¿Es posible considerar a los agentes conversacionales basados en grandes modelos
+de lenguaje (LLMs) como conscientes?
+2. ¿Cuáles son las implicaciones éticas de atribuir conciencia y, por ende, "derechos
+morales" a los agentes de IA avanzados?
 
 1. **¿Es posible considerar a los agentes conversacionales basados en grandes modelos de lenguaje (LLMs) como conscientes?**
 
