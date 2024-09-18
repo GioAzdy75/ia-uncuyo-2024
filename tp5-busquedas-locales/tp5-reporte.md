@@ -49,7 +49,7 @@ La cantidad de estados previos promedio, y su desviacion estandar, por los que t
 
 
 Funcion H(e) en un entorno 8x8
-![](images/figure_1.png)
+![](images/Figure_1.png)
 
 **Conclusiones**
 
