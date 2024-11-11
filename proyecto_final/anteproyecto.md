@@ -77,16 +77,36 @@ Se realiza una combinacion lineal entre la funcion de distancia maxima y la de p
 
 ### Metricas
 #### Objetivo
-El valor de la funcion objetivo cuanto menor sea mejor, buscando ver si converge o en otras palabras funcion objetivo no disminuye demasiado a lo largo de las iteraciones
+El valor de la función objetivo debe ser lo más bajo posible o se busca cuando no disminuya demasiado durante las iteraciones, para verificar si está convergiendo.
+
 #### Multiobjetivo
 Al ser multiobjetivo se llega a un punto donde una solucion no puede ser mejorara sin emporar otra (Frontera de Pareto) 
 - Hypervolume 
 
-####
+### Algoritmos candidatos a implementar
+1. NSGA-II (Non-dominated Sorting Genetic Algorithm II)
+2. MOGA (Multi-Objective Genetic Algorithm)
+3. MOACO (Multi-Objective Ant Colony Optimization)
+
+en caso de no ser multiobjetivo se implementara ACO (Ant Colony Optimization)
 
 ## Listado de actividades a realizar
+1. Leer Bibliografia y estudiar los conceptos de la resolucion de problemas multiobjetivo (7 dias)
+2. Preparación de datos de entrada (clientes, depósitos, vehículos, capacidades, ventanas de tiempo, etc.). (7 dias)
+3. Desarrollo del algorito evolutivo. (5 dias)
+4. Pruebas y Ajuste de Parámetros. (3 dias)
+5. Documentación y Presentación de Resultados (3 dias)
+6. Desarrolo de Presentacion e informe final (4 dias)
+
+#### Total de dias estimados : 29 dias
 
 ## Bibliografía
+Introduction to Evolutionary Computing J.E. Smith.
+Capitulos : 7,8,12,13
+
+Algoritmos MultiObjetivos
+https://pymoo.org/algorithms/moo
+
 Ant Colony Optimization for Multi-objective
 Optimization Problems 
 https://hal.science/hal-01502167/document
