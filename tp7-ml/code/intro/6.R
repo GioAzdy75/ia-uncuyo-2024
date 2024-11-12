@@ -1,5 +1,3 @@
-create_folds()
-```
 create_folds <- function(data, k) {
   set.seed(777)
   indices <- sample(1:nrow(data)) # Mezcla aleatoria de índices
@@ -14,10 +12,23 @@ create_folds <- function(data, k) {
   
   return(folds)
 }
-```
 
-cross_validation()
-```
+library(rpart)
+
+# Función para calcular la matriz de confusión y métricas
+calculate_metrics <- function(predictions, actual) {
+  tp <- sum(predictions == 1 & actual == 1) # Verdaderos positivos
+  tn <- sum(predictions == 0 & actual == 0) # Verdaderos negativos
+  fp <- sum(predictions == 1 & actual == 0) # Falsos positivos
+  fn <- sum(predictions == 0 & actual == 1) # Falsos negativos
+  
+  accuracy <- (tp + tn) / (tp + tn + fp + fn)
+  precision <- ifelse((tp + fp) > 0, tp / (tp + fp), 0)
+  sensitivity <- ifelse((tp + fn) > 0, tp / (tp + fn), 0)
+  specificity <- ifelse((tn + fp) > 0, tn / (tn + fp), 0)
+  
+  return(c(Accuracy = accuracy, Precision = precision, Sensitivity = sensitivity, Specificity = specificity))
+}
 cross_validation <- function(data, k) {
   folds <- create_folds(data, k)
   metrics <- data.frame(Accuracy = numeric(k), Precision = numeric(k),
@@ -61,6 +72,10 @@ cross_validation <- function(data, k) {
   
   return(metrics_summary)
 }
-```
 
-![](images/cv.jpg)
+
+train_data <- read.csv("data/arbolado-mendoza-dataset-train.csv")
+train_data$inclinacion_peligrosa <- as.factor(df$inclinacion_peligrosa)
+
+metrics_summary <- cross_validation(df, 10)
+print(metrics_summary)

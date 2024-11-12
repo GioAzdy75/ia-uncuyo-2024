@@ -9,7 +9,7 @@ library(ggplot2)
 ggplot(train_data, aes(x = circ_tronco_cm, fill = inclinacion_peligrosa)) +
   geom_histogram(bins = 15, position = "dodge") +
   labs(title = "Histograma de circ_tronco_cm por inclinación peligrosa",
-       x = "circ_tronco_cm", y = "Frecuencia") +
+       x = "circ_tronco_cm", y = "Frequency") +
   theme_minimal() +
   scale_fill_manual(values = c("skyblue", "salmon"), 
                     name = "Inclinación Peligrosa")
